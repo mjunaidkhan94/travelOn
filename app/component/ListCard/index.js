@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { Image, View, StyleSheet } from 'react-native';
+import { Alert, Image, View, StyleSheet } from 'react-native';
 import { Toast, Container, Header, Title, Content, List, ListItem, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
 // create a component

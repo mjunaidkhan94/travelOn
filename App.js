@@ -10,11 +10,14 @@ import Main from './app/component/Main';
 import Test2 from './app/component/Test2';
 import detailTour from './app/component/detailTour';
 import { StackNavigator  } from 'react-navigation';
+import ActivityScreen from './app/component/ActivityScreen';
+import MyTabs from './app/component/MyTabs';
 
 const Navigation = StackNavigator ({
   Home: {screen: Main},
   Second: {screen: Test2},
-  Detail: {screen: detailTour}
+  Detail: {screen: detailTour},
+  MyTabs: {screen: MyTabs}
 });
 
 export default Navigation;

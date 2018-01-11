@@ -61,7 +61,8 @@ export default class CardImageExample extends Component {
             </Card>
           </ListItem>
 
-          <ListItem>
+          <ListItem  onPress={() => {
+           this.props.navigation.navigate('MyTabs')}}>
             <Card>
               <CardItem>
                 <Left>
