@@ -22,11 +22,10 @@ const cards = [
 
 ];
 // create a component
-export default class ActivityScreen extends Component {
+export default class CardDeck extends Component {
   render() {
     return (
       <Container>
-      
         <View>
           <DeckSwiper
             dataSource={cards}

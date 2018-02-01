@@ -7,7 +7,7 @@ export default class detailTour extends Component {
     render() {
         return (
           <View>
-            <Image source={require('../../../images/3.jpg')}
+            <Image source={require('../../../images/a.png')}
             style={styles.backgroundImage}>
             </Image>
             <Text>sdfsdf</Text>

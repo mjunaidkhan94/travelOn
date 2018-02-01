@@ -10,7 +10,7 @@ const {
 //import liraries
 import React, { Component } from 'react';
 import { Container, Header, Tab, Tabs, TabHeading, Icon, Text } from 'native-base';
-import { View, StyleSheet } from 'react-native';
+import { Alert, View, StyleSheet } from 'react-native';
 // import Login from './fbLogin';
 
 
@@ -24,13 +24,13 @@ export default class Login extends Component {
           onLoginFinished={
             (error, result) => {
               if (error) {
-                alert("login has error: " + result.error);
+                Alert.alert("login has error: " + result.error);
               } else if (result.isCancelled) {
-                alert("login is cancelled.");
+                Alert.alert("login is cancelled.");
               } else {
                 AccessToken.getCurrentAccessToken().then(
                   (data) => {
-                    alert(data.accessToken.toString())
+                    Alert.alert(data.accessToken.toString())
                   }
                 )
               }

@@ -41,7 +41,7 @@ export default class CardImageExample extends Component {
       <Container style={styles.container}>
       <Content>
         <List>
-          <ListCard title="Title1" desr="ABC" img="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" logo="https://cdn.dribbble.com/users/6890/screenshots/2397792/_mountain_logo_dribbble.png"/>
+          <ListCard title="Kashmit Tour" desr="NAC" img="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" logo="https://cdn.dribbble.com/users/6890/screenshots/2397792/_mountain_logo_dribbble.png"/>
 
           <ListItem  onPress={() => {
            this.props.navigation.navigate('Detail')}}>
@@ -79,7 +79,8 @@ export default class CardImageExample extends Component {
             </Card>
           </ListItem>
 
-          <ListItem>
+          <ListItem  onPress={() => {
+            this.props.navigation.navigate('Splash')}}>
             <Card>
               <CardItem>
                 <Left>
@@ -96,7 +97,8 @@ export default class CardImageExample extends Component {
             </Card>
           </ListItem>
 
-          <ListItem>
+          <ListItem  onPress={() => {
+           this.props.navigation.navigate('Activities')}}>
             <Card>
               <CardItem>
                 <Left>
