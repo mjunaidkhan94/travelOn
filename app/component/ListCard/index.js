@@ -3,12 +3,27 @@ import React, { Component } from 'react';
 import { Alert, Image, View, StyleSheet } from 'react-native';
 import { Toast, Container, Header, Title, Content, Badge, List, ListItem, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
+
 // create a component
 export default class ListCard extends Component {
+
+    constructor(props) {
+        super(props);
+        // this.state = {
+        //   showToast: false
+        // }
+      }
+    
     render() {
+        let stars = [];
+
+        for(let i=1;  i<this.props.rating; i++)
+            stars.push(<Icon key={i} style={{color:'black', padding:5, fontSize:20}} name='star'/>)
+
         return (
             <ListItem onPress={() => {
-                Alert.alert('You tapped Card#1!')}}>
+                //Alert.alert('ok')}}>
+                this.props.navigateTo.navigate('Second')}}>
                 <Card>
                     <CardItem>
                         <Left>
@@ -19,8 +34,9 @@ export default class ListCard extends Component {
                         </Body>
                         </Left>
                         <Right>
-                            <Icon style={{color:'black', padding:5, fontSize:20}} name='star'>
-                            <Icon style={{color:'black', padding:5, fontSize:20}} name='star'/>
+                        {/* 1 star is compulsary */}
+                            <Icon style={{color:'black', padding:5, fontSize:20}} name='star'> 
+                            {stars}
                             </Icon>
                             <Badge iconRight style={styles.priceTag}>
                                 {/* <Text >2000 Rs</Text>

@@ -26,6 +26,7 @@ export default class Test2 extends Component {
     });
 
     render() {
+    
         return (
             
             <Container style={styles.container}>

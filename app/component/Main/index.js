@@ -3,6 +3,7 @@ import {  Alert, Image, StyleSheet } from 'react-native';
 import { Toast, Container, Header, Title, Content, List, ListItem, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 import ListCard from '../ListCard';
 
+
 export default class CardImageExample extends Component {
   
   static navigationOptions =  ({ navigation }) => ({
@@ -30,20 +31,30 @@ export default class CardImageExample extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      showToast: false
-    }
+    // this.state = {
+    //   showToast: false
+    // }
   }
 
   render() {
-     
+
     return (
       <Container style={styles.container}>
       <Content>
         <List>
-          <ListCard title="Kashmit Tour" desr="NAC" img="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" logo="https://cdn.dribbble.com/users/6890/screenshots/2397792/_mountain_logo_dribbble.png"/>
+          <ListCard title="Kashmit Tour" desr="NAC" 
+          img="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" 
+          logo="https://cdn.dribbble.com/users/6890/screenshots/2397792/_mountain_logo_dribbble.png"
+          rating="5" price="20000"
+          navigateTo = {this.props.navigation}/>
 
-          <ListItem  onPress={() => {
+          <ListCard title="Kashmit Tour" desr="NAC" 
+          img="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" 
+          logo="https://cdn.dribbble.com/users/6890/screenshots/2397792/_mountain_logo_dribbble.png"
+          rating="4" price="25000"
+          navigateTo = {this.props.navigation}/>
+
+          {/* {/* <ListItem  onPress={() => {
            this.props.navigation.navigate('Detail')}}>
             <Card>
               <CardItem>
@@ -59,7 +70,7 @@ export default class CardImageExample extends Component {
                 <Image source={require('../../../images/snow-mountains.jpg')}  style={{height: 200, width: null, flex: 1}}/>
               </CardItem>
             </Card>
-          </ListItem>
+          </ListItem> */}
 
           <ListItem  onPress={() => {
            this.props.navigation.navigate('MyTabs')}}>
@@ -80,7 +91,7 @@ export default class CardImageExample extends Component {
           </ListItem>
 
           <ListItem  onPress={() => {
-            this.props.navigation.navigate('Splash')}}>
+            this.props.navigation.navigate('MainLoginScreen')}}>
             <Card>
               <CardItem>
                 <Left>
@@ -113,7 +124,7 @@ export default class CardImageExample extends Component {
                 <Image source={require('../../../images/3.jpg')}  style={{height: 200, width: null, flex: 1}}/>
               </CardItem>
             </Card>
-          </ListItem>    
+          </ListItem>     
         </List>
         </Content>
       </Container>

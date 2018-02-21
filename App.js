@@ -13,6 +13,7 @@ import { StackNavigator  } from 'react-navigation';
 import MyTabs from './app/component/MyTabs';
 import Splash from './app/component/Splash';
 import Activities from './app/component/Activities';
+import MainLoginScreen from './app/component/MainLoginScreen';
 
 const Navigation = StackNavigator ({
   Home: {screen: Main},
@@ -21,6 +22,7 @@ const Navigation = StackNavigator ({
   MyTabs: {screen: MyTabs},
   Splash: {screen: Splash},
   Activities: {screen: Activities},
+  MainLoginScreen: {screen: MainLoginScreen},
 });
 
 export default Navigation;
